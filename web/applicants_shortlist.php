@@ -14,11 +14,11 @@
 		$jobrefid = $_GET["jobrefid"];
 		
 		
-		$host = 'ec2-54-75-249-162.eu-west-1.compute.amazonaws.com';
-		$database = 'dea2li9qvvs6e4';
-		$user = 'ucxhvwaujfziup';
+		$host = 'ec2-54-243-252-91.compute-1.amazonaws.com';
+		$database = 'd52imn0hvjaehu';
+		$user = 'nzntlehjqwzxlp';
 		$port = '5432';
-		$password = '23f43414d44152563df28db7b1787b2556c4b353780152fb6ff1eae536fe9dc2';
+		$password = '44e3e8ea3d41db6da2fb60164064fb876f8f462d09abebfe04cff98b67d1e3a0';
 		$table = 'applicant';
 
 

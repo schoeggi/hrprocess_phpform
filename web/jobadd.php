@@ -5,7 +5,9 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <title>Job Application Form</title>
       <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">    
-      <link rel="stylesheet" type="text/css" href="/stylesheets/myStyle.css" />
+      <link rel="stylesheet" type="text/css" href="./stylesheets/myStyle.css" />
+	  <link rel="stylesheet" type="text/css" href="./stylesheets/pure.css" />
+	  
 	</head>   
     <body>	
 		<form class="pure-form pure-form-aligned" action="save_application.php" method="post">
@@ -15,6 +17,10 @@
 					$maturity = $_GET['maturity'];
 					$jobrefid = $_GET['jobrefid'];
 					echo "Applying for open position: $maturity $job $jobrefid";
+					
+					//$_POST['job'] = $job;
+					//$_POST['maturity'] = $maturity;
+					//$_POST['jobrefid'] = $jobrefid;
 					?>	-->
 			<fieldset>	
 				<div class="pure-control-group">
@@ -51,6 +57,10 @@
 		            	<option>other</option>   
 		        	</select>
 		    	</div>
+				<div class="pure-control-group">
+		        	<label for="jobExperience">Years of job experience</label>
+		        	<input class="form-control mytext" type="number" required min="0" max="100" step="1" id="jobExperience" name="jobExperience" placeholder="Job experience in years"/>
+		    	</div>		    	
 		    	<div class="pure-control-group">
 					<table>
 						<tr>
@@ -99,8 +109,8 @@
 		        	<input class="form-control mytext" type="number" required min="10" max="100" step="10" id="maxWorkload" name="maxWorkload" placeholder="Between 10 and 100%"/>
 		    	</div>
 		    	<div class="pure-control-group">
-		        	<label for="maxSalary">Max Salary</label>
-		        	<input class="form-control mytext" type="number" required min="80000" max="200000" step="1000" id="maxSalary" name="maxSalary" placeholder="Between 80'000 and 200'000 CHF"/>
+		        	<label for="maxSalary">Salary</label>
+		        	<input class="form-control mytext" type="number" required min="50000" max="300000" step="1000" id="maxSalary" name="maxSalary" placeholder="Between 50'000 and 300'000 CHF"/>
 		    	</div>
 				<div class="pure-control-group">
 		        	<label for="travel">Willingness to travel</label>
@@ -108,11 +118,13 @@
 		    	</div>
 		    	<div class="pure-control-group">
 		        	<label for="comment">Comment</label>
-		        	<textarea class="form-control mytext" required id="comment" name="comment" placeholder="Type your comment for budget approval here..."></textarea>
+		        	<textarea class="form-control mytext" required id="comment" name="comment" placeholder="State your motivation for appyling for this job..."></textarea>
 		    	</div>
-
+				
 		    </fieldset>
-			<input type="Submit" value="Submit" />
+			<div class="pure-control-group">
+				<input class="form-control mytext" type="Submit" value="Submit" />
+			</div>
 		</form>
 		<?php
 			//echo date("d.m.Y H:i:s");
